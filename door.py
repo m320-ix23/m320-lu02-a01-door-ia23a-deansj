@@ -73,7 +73,7 @@ class Door:
     @property
     def door_is_open(self):
         """
-        getter-Methode für den Zustand door_is_open
+        getter-Methode für den Zust and door_is_open
         :return: true, wenn die Türe offen ist, sonst false
         """
         return self._door_is_open
