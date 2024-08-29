@@ -19,6 +19,7 @@ class Door:
         """
         # ein privates Attribut muss im Konstruktor initialisiert werden und ist dann in der Klasse
         # über self._name_des_Attributs ansprechbar.
+        self.door_is_locked = self.lock_the_door
         self._the_door_lock = ref2door_lock
         # Hier wird der Setter eines Attributs aufgerufen (siehe unten)
         self.color = base_color
@@ -32,7 +33,7 @@ class Door:
         Methode für das öffnen der Türe.
         Das ist aber nur möglich, wenn die Türe nicht verriegelt ist.
         """
-        if self._door_is_locked == False:
+        if self._door_is_locked is False:
             self._door_is_open = True
 
     def close_the_door(self):
@@ -48,7 +49,7 @@ class Door:
         Das ist nur möglich, wenn die Türe nicht offen ist.
         Für das verriegeln ist aber das Türschloss zuständig. Es weiss wie das geht.
         """
-        if self._door_is_open == False:
+        if self._door_is_open is False:
             self._door_is_locked = self._the_door_lock.lock()
 
     def unlock_the_door(self):
